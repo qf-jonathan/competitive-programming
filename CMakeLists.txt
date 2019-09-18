@@ -3,4 +3,4 @@ project(competitive_programming)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(competitive_programming uri/2962.cpp)
+add_executable(competitive_programming uri/2963.cpp)
