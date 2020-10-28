@@ -1,2 +1,8 @@
-# competitive programming 
-Solutions for competititve programming questions.
+# competitive programming
+Collection of solutions for competitive programming questions.
+
+# Why?
+This repository is just for educational purpose and for any future reference by anyone.
+
+# Contribution
+Please read the Contribution Guidelines before you contribute.
