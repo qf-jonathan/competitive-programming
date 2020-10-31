@@ -15,8 +15,10 @@ void fill() {
             int cnt = 0;
             for (int d = 0; d < 8; d++) {
                 int ni = i + di[d], nj = j + dj[d];
-                if (ni < 0 || ni >= n) continue;
-                if (nj < 0 || nj >= m) continue;
+                if (ni < 0 || ni >= n)
+                    continue;
+                if (nj < 0 || nj >= m)
+                    continue;
                 cnt++;
             }
             heur[i][j] = cnt;
@@ -27,7 +29,8 @@ void fill() {
 vector<pair<int, int>> cPath, ansPath;
 
 bool getPath(int pi, int pj) {
-    if (used[pi][pj]) return false;
+    if (used[pi][pj])
+        return false;
     used[pi][pj] = true;
     cPath.emplace_back(pi, pj);
     if (cPath.size() == n * m) {
@@ -37,14 +40,17 @@ bool getPath(int pi, int pj) {
     vector<pair<pair<int, int>, pair<int, int>>> p;
     for (int ni = 0; ni < n; ni++) {
         for (int nj = 0; nj < m; nj++) {
-            if (pi == ni || pj == nj) continue;
-            if (pi - pj == ni - nj || pi + pj == ni + nj) continue;
+            if (pi == ni || pj == nj)
+                continue;
+            if (pi - pj == ni - nj || pi + pj == ni + nj)
+                continue;
             p.push_back({{ni + nj, heur[ni][nj]}, {ni, nj}});
         }
     }
     sort(p.begin(), p.end());
-    for (const auto &e: p) {
-        if (getPath(e.second.first, e.second.second)) return true;
+    for (const auto &e : p) {
+        if (getPath(e.second.first, e.second.second))
+            return true;
     }
     used[pi][pj] = false;
     cPath.pop_back();
@@ -62,7 +68,7 @@ int main() {
         memset(used, false, sizeof(used));
         if (getPath(0, 0)) {
             cout << "POSSIBLE" << endl;
-            for (const auto &e: ansPath) {
+            for (const auto &e : ansPath) {
                 cout << e.first + 1 << ' ' << e.second + 1 << endl;
             }
         } else {

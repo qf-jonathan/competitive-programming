@@ -9,7 +9,7 @@ int main() {
     for (int tc = 1; tc <= t; tc++) {
         cin >> sz >> path;
         string ans;
-        for (const char &c: path) {
+        for (const char &c : path) {
             ans.push_back(c == 'S' ? 'E' : 'S');
         }
         cout << "Case #" << tc << ": " << ans << endl;

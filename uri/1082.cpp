@@ -32,7 +32,8 @@ int main() {
             if (!vis[i]) {
                 cs.clear(), dfs(i), cc++;
                 sort(cs.begin(), cs.end());
-                for (int j = 0; j < (int) cs.size(); j++) printf("%c,", cs[j]);
+                for (int j = 0; j < (int)cs.size(); j++)
+                    printf("%c,", cs[j]);
                 puts("");
             }
         printf("%d connected components\n\n", cc);

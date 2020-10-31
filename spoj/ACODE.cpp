@@ -8,7 +8,7 @@ int main() {
     string cad;
     while (cin >> cad, cad[0] != '0') {
         long long dp[5005] = {1};
-        for (int i = 1; i <= (int) cad.size(); i++) {
+        for (int i = 1; i <= (int)cad.size(); i++) {
             if (cad[i - 1] != '0') {
                 dp[i] += dp[i - 1];
             }

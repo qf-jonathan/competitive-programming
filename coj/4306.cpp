@@ -14,19 +14,25 @@ int main() {
         do {
             int w = cr[0] + cr[1] + cr[2] * 2;
             int h = cr[0] * 2 + cr[1];
-            if ((h <= a && w <= b) || (h <= b && w <= a)) ans = true;
+            if ((h <= a && w <= b) || (h <= b && w <= a))
+                ans = true;
             w = cr[0] + cr[1] * 2 + cr[2];
             h = cr[0] + cr[1] + cr[2];
-            if ((h <= a && w <= b) || (h <= b && w <= a)) ans = true;
+            if ((h <= a && w <= b) || (h <= b && w <= a))
+                ans = true;
             w = cr[1] * 2 + cr[2] * 2;
             h = cr[0] + cr[2] * 2;
-            if ((h <= a && w <= b) || (h <= b && w <= a)) ans = true;
+            if ((h <= a && w <= b) || (h <= b && w <= a))
+                ans = true;
             w = cr[0] + cr[1] * 3 + cr[2];
             h = cr[0] + cr[2];
-            if ((h <= a && w <= b) || (h <= b && w <= a)) ans = true;
+            if ((h <= a && w <= b) || (h <= b && w <= a))
+                ans = true;
         } while (next_permutation(cr, cr + 3));
-        if (ans) printf("POSSIBLE\n");
-        else printf("IMPOSSIBLE\n");
+        if (ans)
+            printf("POSSIBLE\n");
+        else
+            printf("IMPOSSIBLE\n");
     }
     return 0;
 }

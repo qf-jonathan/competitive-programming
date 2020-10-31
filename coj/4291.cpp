@@ -30,9 +30,12 @@ int main() {
         if (na[0] == nb[0]) {
             ans = a == b ? 0 : (a > b ? 1 : 2);
         }
-        if (ans == 0) printf("Draw\n");
-        else if (ans == 1) printf("Tobby\n");
-        else printf("Naebbirac\n");
+        if (ans == 0)
+            printf("Draw\n");
+        else if (ans == 1)
+            printf("Tobby\n");
+        else
+            printf("Naebbirac\n");
     }
     return 0;
 }

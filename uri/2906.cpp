@@ -13,7 +13,7 @@ string unique(const string &email) {
         localpart = localpart.substr(0, pp);
     }
     string clear;
-    for (const char &c: localpart) {
+    for (const char &c : localpart) {
         if (isalpha(c)) {
             clear.push_back(c);
         }
