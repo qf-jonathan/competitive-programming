@@ -1,5 +1,6 @@
 // Problem link: https://www.urionlinejudge.com.br/judge/en/problems/view/1068
-#include <cstdio>
+
+#include <cstdio>
 
 inline bool valid(char *c) {
     int st = 0;

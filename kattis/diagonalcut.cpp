@@ -1,5 +1,6 @@
 // Problem link: https://open.kattis.com/problems/diagonalcut
-#include <bits/stdc++.h>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 

@@ -1,5 +1,6 @@
 // Problem link: https://coj.uci.cu/24h/problem.xhtml?pid=4319
-#include <bits/stdc++.h>
+
+#include <bits/stdc++.h>
 
 using namespace std;
 

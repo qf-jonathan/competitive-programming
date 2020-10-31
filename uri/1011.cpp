@@ -1,5 +1,6 @@
 // Problem link: https://www.urionlinejudge.com.br/judge/en/problems/view/1011
-#include <cstdio>
+
+#include <cstdio>
 
 int main() {
     double r;

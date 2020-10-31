@@ -1,5 +1,6 @@
 // Problem link: https://www.urionlinejudge.com.br/judge/en/problems/view/1132
-#include <cstdio>
+
+#include <cstdio>
 #include <iostream>
 
 #define sm(n) (((n)*((n)+1))/2)
