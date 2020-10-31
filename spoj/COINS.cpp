@@ -1,3 +1,5 @@
+// Problem link: https://www.spoj.com/problems/COINS/
+
 #include <bits/stdc++.h>
 
 using namespace std;

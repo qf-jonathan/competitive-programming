@@ -1,3 +1,5 @@
+// Problem link: https://open.kattis.com/problems/circuitmath
+
 #include <bits/stdc++.h>
 
 using namespace std;

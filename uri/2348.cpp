@@ -1,3 +1,5 @@
+// Problem link: https://www.urionlinejudge.com.br/judge/en/problems/view/2348
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -23,5 +25,3 @@ int main() {
     printf("%.3lf\n", ans / 2);
     return 0;
 }
-
-
