@@ -1,4 +1,5 @@
-#include <cstdio>
+// Problem link: https://www.urionlinejudge.com.br/judge/en/problems/view/1026
+#include <cstdio>
 
 int main() {
     unsigned int a, b;
