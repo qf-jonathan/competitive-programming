@@ -4,12 +4,14 @@
 
 using namespace std;
 
-int ns[30], dp[1000005], t, n, m;;
+int ns[30], dp[1000005], t, n, m;
+;
 
 int main() {
     for (scanf("%d", &t); t--;) {
         scanf("%d%d", &n, &m);
-        for (int i = 0; i < n; i++) scanf("%d", ns + i);
+        for (int i = 0; i < n; i++)
+            scanf("%d", ns + i);
         fill(dp, dp + m + 1, 1 << 30);
         dp[0] = 0;
         for (int i = 1; i <= m; i++) {

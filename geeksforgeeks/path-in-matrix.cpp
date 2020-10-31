@@ -18,7 +18,8 @@ int main() {
                     mx = max(mx, dp[r - 1][c + 1]);
                     dp[r][c] += mx;
                 }
-                if (r == n) ans = max(ans, dp[r][c]);
+                if (r == n)
+                    ans = max(ans, dp[r][c]);
             }
         }
         cout << ans << endl;

@@ -25,8 +25,10 @@ int main() {
             st.pop();
             char b = st.top();
             st.pop();
-            if (c == '*') st.push(a == b && a == 'T' ? 'T' : 'F');
-            else st.push(a == b && a == 'F' ? 'F' : 'T');
+            if (c == '*')
+                st.push(a == b && a == 'T' ? 'T' : 'F');
+            else
+                st.push(a == b && a == 'F' ? 'F' : 'T');
         }
     }
     cout << st.top() << endl;

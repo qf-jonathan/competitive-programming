@@ -17,7 +17,8 @@ void initDS() {
 }
 
 int fndDS(int e) {
-    if (e == DS[e]) return e;
+    if (e == DS[e])
+        return e;
     return DS[e] = fndDS(DS[e]);
 }
 
@@ -27,24 +28,28 @@ void initDP(int n) {
             if (i == 0) {
                 DP[i][j].p = P[j];
                 DP[i][j].me = C[j];
-            } else DP[i][j].p = -1;
+            } else
+                DP[i][j].p = -1;
     for (int i = 1; (1 << i) < n; i++)
         for (int j = 0; j < n; j++)
             if (DP[i - 1][j].p != -1) {
-                DP[i][j].me = max(DP[i - 1][j].me, DP[i - 1][DP[i - 1][j].p].me);
+                DP[i][j].me =
+                    max(DP[i - 1][j].me, DP[i - 1][DP[i - 1][j].p].me);
                 DP[i][j].p = DP[i - 1][DP[i - 1][j].p].p;
             }
 }
 
 inline int lcaEdge(int a, int b) {
-    if (L[a] < L[b]) swap(a, b);
+    if (L[a] < L[b])
+        swap(a, b);
     int lg = log2(L[a]), mx = 0;
     for (int i = lg; i >= 0; i--)
         if (L[a] - (1 << i) >= L[b]) {
             mx = max(mx, DP[i][a].me);
             a = DP[i][a].p;
         }
-    if (a == b) return mx;
+    if (a == b)
+        return mx;
     for (int i = lg; i >= 0; i--)
         if (DP[i][a].p != -1 && DP[i][a].p != DP[i][b].p) {
             mx = max(mx, DP[i][a].me);
@@ -69,7 +74,7 @@ void bfs(int from) {
         P[v] = p;
         L[v] = d;
         C[v] = c;
-        for (auto &to: g[v])
+        for (auto &to : g[v])
             if (to.first != p)
                 q.push(make_tuple(to.first, v, d + 1, to.second));
     }
@@ -84,14 +89,15 @@ int main() {
     }
     sort(el.begin(), el.end());
     initDS();
-    for (auto &e: el) {
+    for (auto &e : el) {
         tie(c, a, b) = e;
         if (fndDS(a) != fndDS(b)) {
             g[a].emplace_back(b, c);
             g[b].emplace_back(a, c);
             DS[fndDS(a)] = fndDS(b);
             cost += c;
-        } else in[{a, b}] = c;
+        } else
+            in[{a, b}] = c;
     }
     srand(time(0));
     bfs((rand() % n) + 1);

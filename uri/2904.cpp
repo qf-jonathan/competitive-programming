@@ -19,9 +19,10 @@ int main() {
     } else {
         long long mid = sm / 2;
         int cnt = 0;
-        for (const long long &e: st) {
+        for (const long long &e : st) {
             long long tr = (e + mid);
-            if (tr > sm) tr = tr - sm;
+            if (tr > sm)
+                tr = tr - sm;
             cnt += st.count(tr);
             if (cnt > 2) {
                 break;

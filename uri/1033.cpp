@@ -17,15 +17,12 @@ int main() {
     long long n, tn;
     int b, cc = 1;
     while (scanf("%lld%d", &n, &b), n || b) {
-        int mt[][3] = {{1, 1, 1},
-                       {1, 0, 0},
-                       {0, 0, 1}};
-        int id[][3] = {{1, 0, 0},
-                       {0, 1, 0},
-                       {0, 0, 1}};
+        int mt[][3] = {{1, 1, 1}, {1, 0, 0}, {0, 0, 1}};
+        int id[][3] = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}};
         tn = n;
         while (tn) {
-            if (tn & 1ll) mul(id, mt, b);
+            if (tn & 1ll)
+                mul(id, mt, b);
             mul(mt, mt, b);
             tn /= 2;
         }

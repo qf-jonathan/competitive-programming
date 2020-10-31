@@ -11,8 +11,10 @@ int main() {
         gets(ln);
         int st = 0, cnt = 0;
         for (int i = 0; ln[i]; i++) {
-            if (ln[i] == '<') st++;
-            if (ln[i] == '>' && st) cnt++, st--;
+            if (ln[i] == '<')
+                st++;
+            if (ln[i] == '>' && st)
+                cnt++, st--;
         }
         printf("%d\n", cnt);
     }

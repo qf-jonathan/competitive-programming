@@ -22,27 +22,31 @@ int main() {
         for (int j = i + 1; j < k; j++) {
             int tx, ty, ts;
             tie(tx, ty, ts) = tp[j];
-            if ((x - tx) * (x - tx) + (y - ty) * (y - ty) <= (s + ts) * (s + ts)) {
+            if ((x - tx) * (x - tx) + (y - ty) * (y - ty) <=
+                (s + ts) * (s + ts)) {
                 gr[i].push_back(j);
                 gr[j].push_back(i);
             }
         }
-        if (x <= s || n - y <= s) l.insert(i);
-        if (y <= s || m - x <= s) r.insert(i);
+        if (x <= s || n - y <= s)
+            l.insert(i);
+        if (y <= s || m - x <= s)
+            r.insert(i);
     }
     if (!l.empty() && !r.empty()) {
         vector<bool> vis(k, false);
         function<void(int)> dfs;
         dfs = [&](int v) {
             vis[v] = true;
-            if (r.count(v)) ans = false;
-            for (int to: gr[v]) {
+            if (r.count(v))
+                ans = false;
+            for (int to : gr[v]) {
                 if (!vis[to]) {
                     dfs(to);
                 }
             }
         };
-        for (int e: l) {
+        for (int e : l) {
             if (!vis[e]) {
                 dfs(e);
             }

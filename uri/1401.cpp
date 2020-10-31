@@ -14,9 +14,12 @@ int main() {
         while (true) {
             puts(cad);
             i = sz - 2, j = sz - 1;
-            while (i >= 0 && cad[i] >= cad[i + 1]) i--;
-            if (i < 0) break;
-            while (cad[j] <= cad[i]) j--;
+            while (i >= 0 && cad[i] >= cad[i + 1])
+                i--;
+            if (i < 0)
+                break;
+            while (cad[j] <= cad[i])
+                j--;
             swap(cad[i], cad[j]);
             reverse(cad + i + 1, cad + sz);
         }

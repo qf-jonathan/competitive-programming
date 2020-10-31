@@ -17,11 +17,14 @@ void add(const string &str) {
 
 int cnt(int index = 0) {
     int rcnt = 0;
-    for (const auto &to: trie[index]) {
-        if (to.first == '$') rcnt++;
-        else rcnt += cnt(to.second);
+    for (const auto &to : trie[index]) {
+        if (to.first == '$')
+            rcnt++;
+        else
+            rcnt += cnt(to.second);
     }
-    if (rcnt > 1 && index != 0) rcnt -= 2;
+    if (rcnt > 1 && index != 0)
+        rcnt -= 2;
     return rcnt;
 }
 

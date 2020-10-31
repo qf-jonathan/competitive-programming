@@ -16,8 +16,10 @@ int main() {
         bool fst = true;
         for (int i = 1; i <= n; i++) {
             if (!binary_search(ms, ms + m, i)) {
-                if (fst) fst = false;
-                else printf(" ");
+                if (fst)
+                    fst = false;
+                else
+                    printf(" ");
                 printf("%d", i);
             }
         }

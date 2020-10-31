@@ -31,8 +31,10 @@ int main() {
                     ans = true;
             }
         }
-        if (ans) cout << "YES" << endl;
-        else cout << "NO" << endl;
+        if (ans)
+            cout << "YES" << endl;
+        else
+            cout << "NO" << endl;
     }
     return 0;
 }

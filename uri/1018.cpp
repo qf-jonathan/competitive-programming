@@ -9,7 +9,8 @@ int main() {
     scanf("%d", &n);
     printf("%d\n", n);
     for (int i = 0, c; i < 7; i++) {
-        for (c = 0; n >= dt[i]; c++) n -= dt[i];
+        for (c = 0; n >= dt[i]; c++)
+            n -= dt[i];
         printf("%d nota(s) de R$ %d,00\n", c, dt[i]);
     }
     return 0;
