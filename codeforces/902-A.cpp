@@ -1,9 +1,9 @@
 // Problem link: https://codeforces.com/problemset/problem/902/A
 
 #include <iostream>
- 
+
 using namespace std;
- 
+
 int main() {
     int n, m, ar[105] = {};
     cin >> n >> m;

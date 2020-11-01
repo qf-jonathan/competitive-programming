@@ -2,20 +2,21 @@
 
 #include <iostream>
 #include <vector>
- 
+
 using namespace std;
- 
+
 vector<int> g[10005];
 int C[10005], cnt = 0;
- 
+
 void dfs(int v, int p, int c) {
-    if (C[v] != c) cnt++;
-    for (int &to: g[v]) {
+    if (C[v] != c)
+        cnt++;
+    for (int &to : g[v]) {
         if (to != p)
             dfs(to, v, C[v]);
     }
 }
- 
+
 int main() {
     int n, a;
     cin >> n;
